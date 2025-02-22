@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Balgin';
+  src: url('/fonts/balgin-extra-light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  font-family: 'Balgin', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  font-display: block;
+  font-weight: 200;
+  text-transform: capitalize;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hero-subtitle {
+  font-family: 'Balgin', serif;
+  font-weight: 200;
+  font-display: block;
+  letter-spacing: 0.175em;
+  opacity: 0.95;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.inquiries-text {
+  font-family: 'Playfair Display', serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.play-text {
+  font-family: 'Playfair Display', serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.control-panel {
+  position: fixed !important;
+  top: 8px !important;
+  left: 8px !important;
+  z-index: 1000 !important;
+  max-height: 100vh !important;
+  overflow-y: auto !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease-in-out !important;
+  background: transparent !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Hide folder titles */
+.control-panel .title {
+  display: none !important;
+}
+
+/* Hide all numbers and text */
+.control-panel .controller .display {
+  display: none !important;
+}
+
+.control-panel .controller input {
+  display: none !important;
+}
+
+.control-panel .controller .name {
+  display: none !important;
+}
+
+/* Style the controllers */
+.control-panel .controller {
+  background: transparent !important;
+  border: none !important;
+  margin: 12px 0 !important;
+  padding: 0 !important;
+}
+
+/* Style the sliders */
+.control-panel .slider {
+  background: rgba(255, 255, 255, 0.2) !important;
+  height: 2px !important;
+  margin: 16px 0 !important;
+  position: relative !important;
+  border-radius: 1px !important;
+}
+
+.control-panel .slider .fill {
+  background: rgba(255, 255, 255, 0.5) !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+}
+
+.control-panel .slider .thumb {
+  width: 20px !important;
+  height: 20px !important;
+  background: rgba(255, 255, 255, 1) !important;
+  border-radius: 50% !important;
+  margin-top: -10px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer !important;
+  border: none !important;
+}
+
+.control-panel .slider .thumb:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.control-panel .slider .thumb:active {
+  transform: scale(1.2) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.control-panel.visible {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+.copyright-text {
+  font-family: 'Playfair Display', serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
